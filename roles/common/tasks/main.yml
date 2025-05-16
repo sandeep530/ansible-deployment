@@ -1,0 +1,8 @@
+- name: Update and install common packages
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  loop:
+    - git
+    - python3-pip
+    - python3-venv

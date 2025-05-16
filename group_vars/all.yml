@@ -1,0 +1,3 @@
+app_repo: "https://github.com/yourname/flask-app.git"
+mysql_root_password: "rootpassword"
+notification_email: "admin@example.com"

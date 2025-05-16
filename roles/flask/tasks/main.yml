@@ -1,0 +1,13 @@
+- name: Clone the application repo
+  git:
+    repo: "{{ app_repo }}"
+    dest: /opt/flask-app
+
+- name: Install app dependencies
+  pip:
+    requirements: /opt/flask-app/requirements.txt
+
+- name: Run Flask app
+  shell: |
+    cd /opt/flask-app
+    nohup flask run --host=0.0.0.0 &

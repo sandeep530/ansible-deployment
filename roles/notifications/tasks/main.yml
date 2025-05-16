@@ -1,0 +1,9 @@
+- name: Send deployment notification
+  mail:
+    host: smtp.example.com
+    port: 587
+    username: "your_email"
+    password: "your_password"
+    to: "{{ notification_email }}"
+    subject: "Deployment Complete"
+    body: "The application has been deployed successfully!"
